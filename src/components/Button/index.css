@@ -1,0 +1,19 @@
+.btn {
+    color: white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 36px;
+    padding-left: 36px;
+    border-radius: 2px;
+    border: 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn.Gray {
+    background-color: #C3C3C3;
+}
+
+.btn.Red {
+    background-color: #FE8065;
+}

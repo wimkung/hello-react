@@ -1,0 +1,18 @@
+.header {
+    background-color: #00CECC;
+    background-image: url('./ic_popcorn.svg');
+    background-repeat: no-repeat;
+    height: 80px;
+    background-position: 32px 50%;
+    padding-left: 90px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 32px;
+}
+
+.header p {
+    font-size: 18px;
+    font-family: inherit;
+}

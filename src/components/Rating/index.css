@@ -1,0 +1,13 @@
+.rating {
+    color: #A7A7A7;
+    background-image: url('./star.svg');
+    background-repeat: no-repeat;
+    background-position: 0px, 30px;
+    padding-left: 28px;
+    display: inline;
+}
+
+.rating .span {
+    color: #FFCD00;
+}
+

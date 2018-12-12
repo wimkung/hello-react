@@ -1,0 +1,37 @@
+.card .title {
+    font-size: 16px;
+    color: #FF7A6A;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+}
+
+.card .subtitle {
+    font-size: 14px;
+    color: #A7A7A7;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.5em;
+    line-height: 1.8em;
+}
+
+.card img {
+    width: 150px;
+    height: 205px;
+}
+
+.card .img_container {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.card .rating_container {
+    text-align: center;
+    margin-top: 5px;
+}

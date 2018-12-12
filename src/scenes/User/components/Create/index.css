@@ -1,0 +1,22 @@
+.create {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    text-align: center;
+}
+.create h1 {
+    text-align: center;
+    color: #F96A6A;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.create .field-wrapper {
+    margin-bottom: 16px;
+}
+
+.create .error {
+    color: #F96A6A;
+    font-size: 12px;
+    margin-bottom: 24px;
+}

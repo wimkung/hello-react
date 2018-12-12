@@ -1,0 +1,12 @@
+.user-list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 16px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.user-list .user-list-item {
+    padding: 16px;
+}
