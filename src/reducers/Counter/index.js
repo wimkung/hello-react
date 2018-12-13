@@ -1,9 +1,23 @@
-export default (state = 0, action) => {
+export default (state = {
+    number: 0,
+    text: 'foo'
+}, action
+) => {
     switch (action.type) {
         case 'INCREMENT':
-            return state + action.score;
+            state.text += 'o';
+            state.number += action.score
+            return {
+                number: state.number,
+                text: state.text
+            };
         case 'DECREMENT':
-            return state - action.score;
+            state.text += 'o';
+            state.number += action.score
+            return {
+                number: state.number,
+                text: state.text
+            };
         default:
             return state;
     }
