@@ -1,18 +1,18 @@
-import React from 'react';
-import ListUserContainer from './containers/List';
-import DetailUserContainer from  './containers/Detail';
-import CreateUserContainer from  './containers/Create';
+import React from 'react'
+import ListUserContainer from './containers/List'
+import DetailUserContainer from './containers/Detail'
+import CreateUserContainer from './containers/Create'
 
 function ListUser() {
-    return <ListUserContainer/>
+  return <ListUserContainer />
 }
 
 function DetailUser() {
-    return <DetailUserContainer/>
+  return <DetailUserContainer />
 }
 
 function CreateUser() {
-    return <CreateUserContainer/>
+  return <CreateUserContainer />
 }
 
-export { ListUser, DetailUser, CreateUser };
+export { ListUser, DetailUser, CreateUser }

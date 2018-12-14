@@ -1,34 +1,43 @@
-import React from "react";
-import { Field, reduxForm } from "redux-form";
-import { Row, Col, Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
+import React from 'react'
+import { Field, reduxForm } from 'redux-form'
+import {
+  Row,
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormFeedback
+} from 'reactstrap'
 
 const validate = values => {
-  const errors = {};
+  const errors = {}
   if (!values.username) {
-    errors.username = "Required";
+    errors.username = 'Required'
   } else if (values.username.length > 10) {
-    errors.username = "Must be 10 characters or less";
+    errors.username = 'Must be 10 characters or less'
   }
 
   if (!values.firstName) {
-    errors.firstName = "Required";
+    errors.firstName = 'Required'
   } else if (values.firstName.length > 10) {
-    errors.firstName = "Must be 10 characters or less";
+    errors.firstName = 'Must be 10 characters or less'
   }
 
   if (!values.lastName) {
-    errors.lastName = "Required";
+    errors.lastName = 'Required'
   } else if (values.lastName.length > 10) {
-    errors.lastName = "Must be 10 characters or less";
+    errors.lastName = 'Must be 10 characters or less'
   }
 
-  return errors;
-};
+  return errors
+}
 
 const warn = values => {
-  const warnings = {};
-  return warnings;
-};
+  const warnings = {}
+  return warnings
+}
 
 const renderField = ({
   input,
@@ -36,22 +45,24 @@ const renderField = ({
   type,
   meta: { touched, error, warning }
 }) => (
-    <FormGroup row>
-      <Label for={input.name} sm={4}>{label}</Label>
-      <Col sm={8}>
-        <Input {...input} placeholder={label} type={type} invalid={touched}/>
-          {touched &&
-          ((error && <FormFeedback>{error}</FormFeedback>) ||
-            (warning && <FormFeedback>{warning}</FormFeedback>))}
-      </Col>
-    </FormGroup>
-);
+  <FormGroup row>
+    <Label for={input.name} sm={4}>
+      {label}
+    </Label>
+    <Col sm={8}>
+      <Input {...input} placeholder={label} type={type} invalid={touched} />
+      {touched &&
+        ((error && <FormFeedback>{error}</FormFeedback>) ||
+          (warning && <FormFeedback>{warning}</FormFeedback>))}
+    </Col>
+  </FormGroup>
+)
 
 let UserForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props;
+  const { handleSubmit, pristine, reset, submitting } = props
   return (
     <Row>
-      <Col md={{ size: 6, offset: 3}}>
+      <Col md={{ size: 6, offset: 3 }}>
         <Form onSubmit={handleSubmit}>
           <Field
             name="firstName"
@@ -74,21 +85,23 @@ let UserForm = props => {
           <Button type="submit" disabled={submitting}>
             Submit
           </Button>
-          <Button type="button" disabled={pristine || submitting} onClick={reset}>
+          <Button
+            type="button"
+            disabled={pristine || submitting}
+            onClick={reset}
+          >
             Clear Values
           </Button>
         </Form>
       </Col>
-
     </Row>
-
-  );
-};
+  )
+}
 
 UserForm = reduxForm({
-  form: "user",
+  form: 'user',
   validate,
   warn
-})(UserForm);
+})(UserForm)
 
-export default UserForm;
+export default UserForm

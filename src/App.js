@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Route from "./scenes/Route";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import rootReducer from "./reducers";
-import { Container } from "reactstrap";
+import React, { Component } from 'react'
+import './App.css'
+import Route from './scenes/Route'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './reducers'
+import { Container } from 'reactstrap'
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer)
 
 class App extends Component {
   render() {
@@ -19,8 +18,8 @@ class App extends Component {
           </div>
         </Container>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App
