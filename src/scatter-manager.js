@@ -24,7 +24,9 @@ class Scatter {
   }
 
   static getIdentity = async () => {
-    const requiredFields = { accounts: [network] }
+    const requiredFields = {
+      accounts: [network]
+    }
     if (!account) {
       await scatter.getIdentity(requiredFields)
       account = scatter.identity.accounts.find(x => x.blockchain === 'eos')
@@ -37,7 +39,9 @@ class Scatter {
     const transactionOptions = {
       authorization: [`${account.name}@${account.authority}`]
     }
-    const eosOptions = { expireInSeconds: 60 }
+    const eosOptions = {
+      expireInSeconds: 60
+    }
     const eos = scatter.eos(network, Eos, eosOptions)
     const trx = await eos.transfer(
       account.name,
@@ -55,6 +59,22 @@ class Scatter {
     account = null
     console.log('account: ', account)
     return true
+  }
+
+  static callContractSayHi = async () => {
+    const eos = scatter.eos(network, Eos, {
+      expireInSeconds: 60
+    })
+    const id = await scatter.getIdentity({
+      accounts: [network]
+    })
+    const account = id.accounts[0];
+    const options = {
+      authorization: [`${account.name}@${account.authority}`]
+    };
+    const contract = await eos.contract('wimkungyeiei')
+    const response = await contract.hi('fuckingwim', options)
+    console.log('response: ', response)
   }
 }
 

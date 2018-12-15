@@ -14,3 +14,7 @@ export const transfer = payload => ({
 export const forgetIdentity = () => ({
   type: 'FORGET_IDENTIFY'
 })
+
+export const callContract = () => ({
+  type: 'CALL_CONTRACT'
+})

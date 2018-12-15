@@ -37,6 +37,11 @@ export default (
         state.loggedIn = false
       }
       return getObj(state)
+    case 'CALL_CONTRACT':
+      if (state.loggedIn) {
+        Scatter.callContractSayHi()
+      }
+      return getObj(state)
     default:
       return state
   }
