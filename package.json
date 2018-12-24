@@ -32,7 +32,8 @@
     "prettier": "prettier --write 'src/**/*.js'",
     "prettier:watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
     "prettier:check": "prettier --list-different 'src/**/*.{js,scss,css}'",
-    "prettier-changefiles": "pretty-quick --staged"
+    "prettier-changefiles": "pretty-quick --staged",
+    "heroku-postbuild": "yarn run build"
   },
   "eslintConfig": {
     "extends": "react-app"
