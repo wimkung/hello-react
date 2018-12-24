@@ -13,7 +13,8 @@ class Scatter extends Component {
       onDecrement,
       onGetIdentify,
       onTransfer,
-      onForgetIdentify
+      onForgetIdentify,
+      onCallContract
     } = this.props
     return (
       <Fragment>
@@ -48,6 +49,8 @@ class Scatter extends Component {
             Transfer
           </button>{' '}
           <button onClick={onForgetIdentify} disabled={!values.loggedIn}>Forget Identify</button>{' '}
+          {' '}
+          <button onClick={onCallContract} disabled={!values.loggedIn}>Say HI</button>{' '}
         </p>
       </Fragment>
     )
@@ -61,7 +64,8 @@ Scatter.propTypes = {
   onConnect: PropTypes.func.isRequired,
   onGetIdentify: PropTypes.func.isRequired,
   onTransfer: PropTypes.func.isRequired,
-  onForgetIdentify: PropTypes.func.isRequired
+  onForgetIdentify: PropTypes.func.isRequired,
+  onCallContract: PropTypes.func.isRequired
 }
 
 export default Scatter

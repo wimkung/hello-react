@@ -5,7 +5,8 @@ import {
   connect as connectScatter,
   getIdentity,
   transfer,
-  forgetIdentity
+  forgetIdentity,
+  callContract
 } from '../../../../actions/Scatter'
 
 const mapStateToProps = state => {
@@ -31,6 +32,9 @@ const mapDispatchToProps = dispatch => {
     },
     onForgetIdentify: () => {
       dispatch(forgetIdentity())
+    },
+    onCallContract: () => {
+      dispatch(callContract())
     }
   }
 }
